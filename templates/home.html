@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Wellspace — your wellbeing, in one place{% endblock %}
+{% block content %}
+<header class="site-header shell">
+  <a class="brand" href="{% url 'home' %}" aria-label="Wellspace home"><span class="brand-mark">w</span>wellspace</a>
+  <nav aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#about">About</a></nav>
+  <div class="header-actions"><a class="login-link" href="{% url 'login' %}">Log in</a><a class="button button-small" href="{% url 'register' %}">Get started <span>→</span></a></div>
+</header>
+
+<main>
+  <section class="hero shell">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="pulse-dot"></span> your wellbeing companion</p>
+      <h1>Make space for<br><em>feeling better.</em></h1>
+      <p class="hero-text">A calmer, simpler way for students to check in with themselves, find support, and make their health a little less overwhelming.</p>
+      <div class="hero-actions"><a class="button" href="{% url 'register' %}">Start your check-in <span>→</span></a><a class="text-link" href="#how-it-works">See how it works <span>↓</span></a></div>
+      <p class="reassurance"><span>✓</span> Free to use &nbsp;·&nbsp; Made with students in mind</p>
+    </div>
+    <div class="hero-art" aria-label="A peaceful illustration of a person caring for a plant">
+      <div class="sun"></div><div class="arch"></div><div class="dot-pattern"></div>
+      <div class="plant"><span class="leaf l1"></span><span class="leaf l2"></span><span class="leaf l3"></span><span class="stem"></span><span class="pot"></span></div>
+      <div class="person"><span class="hair"></span><span class="head"></span><span class="body"></span><span class="arm"></span><span class="leg leg-one"></span><span class="leg leg-two"></span></div>
+      <div class="paper">weekly<br><b>check-in</b><span class="paper-line"></span><span class="paper-line short"></span></div>
+      <span class="art-spark one">✦</span><span class="art-spark two">✦</span>
+    </div>
+  </section>
+
+  <section class="intro-strip" id="about"><div class="shell strip-content"><p>Health is not a destination.<br><em>It is a practice.</em></p><p class="strip-detail">Small check-ins make a real difference. Wellspace gives you a gentle place to start.</p></div></section>
+
+  <section class="how shell" id="how-it-works">
+    <div class="section-heading"><p class="eyebrow">THE WELLSPACE WAY</p><h2>A little care goes<br>a long way.</h2></div>
+    <div class="steps">
+      <article><div class="step-number">01</div><div class="step-icon">♡</div><h3>Check in</h3><p>Tell us how you are feeling, in your own words. There is no wrong answer.</p></article>
+      <article><div class="step-number">02</div><div class="step-icon">⌁</div><h3>Find support</h3><p>Discover free and low-cost checkup options around you, tailored to what you need.</p></article>
+      <article><div class="step-number">03</div><div class="step-icon">☼</div><h3>Keep growing</h3><p>Build a gentle weekly habit with wellbeing check-ins and thoughtful insights.</p></article>
+    </div>
+  </section>
+</main>
+<footer class="site-footer shell"><a class="brand" href="{% url 'home' %}"><span class="brand-mark">w</span>wellspace</a><p>Here for your whole self.</p><p>© 2026 Wellspace</p></footer>
+{% endblock %}
