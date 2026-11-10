@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}My profile — Wellspace{% endblock %}
+{% block body_class %}account-page{% endblock %}
+{% block page_styles %}<link rel="stylesheet" href="{% static 'profile/css/profile.css' %}">{% endblock %}
+{% block content %}
+<header class="account-header"><a class="brand" href="{% url 'home' %}"><span class="brand-mark">w</span>wellspace</a><nav aria-label="Account navigation"><a class="active" href="{% url 'profile' %}">My profile</a><a href="{% url 'user_settings' %}">Settings</a><a href="{% url 'home' %}">Home</a></nav><a class="avatar avatar-small" href="{% url 'profile' %}" aria-label="Profile">{{ request.user.first_name|first|upper }}{{ request.user.last_name|first|upper }}</a></header>
+<main class="account-shell">
+  <aside class="profile-sidebar"><div class="avatar avatar-large">{{ request.user.first_name|first|upper }}{{ request.user.last_name|first|upper }}</div><h1>{{ request.user.get_full_name }}</h1><p>{{ request.user.email }}</p><span class="member-label">Member since {{ member_since|date:"F Y" }}</span><div class="sidebar-rule"></div><a class="side-link active" href="{% url 'profile' %}"><span>♡</span> Overview</a><a class="side-link" href="{% url 'user_settings' %}"><span>⚙</span> Account settings</a></aside>
+  <section class="profile-content"><div class="profile-greeting"><p class="eyebrow">YOUR WELLSPACE</p><h2>Hi, {{ request.user.first_name }}.</h2><p>Here is a gentle snapshot of your wellbeing space.</p></div><div class="checkin-card"><div><span class="card-icon">☼</span><p class="eyebrow">WEEKLY WELLNESS</p><h3>Your next check-in<br>is waiting for you.</h3><p>Take a quiet moment to notice how you are feeling today.</p><button class="outline-button" type="button">Start check-in <span>→</span></button></div><div class="card-orb"></div></div><div class="profile-grid"><article class="profile-tile"><span class="tile-icon coral">♡</span><p class="tile-label">CHECK-INS</p><strong>0</strong><p>Your completed wellbeing check-ins.</p></article><article class="profile-tile"><span class="tile-icon green">⌁</span><p class="tile-label">SUPPORTS SAVED</p><strong>0</strong><p>Places and resources you have saved.</p></article></div><section class="profile-note"><span>✦</span><div><h3>A little reminder</h3><p>You do not need to have everything figured out to take care of yourself. Showing up is enough.</p></div></section></section>
+</main>
+{% endblock %}

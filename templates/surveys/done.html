@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Check-in saved{% endblock %}
+{% block content %}
+<main class="shell">
+  <h1>Thanks for checking in</h1>
+  <p>Week of {{ response.week_start }}</p>
+  <ul>
+    {% for a in answers %}<li><b>{{ a.question.text }}</b> {{ a.value }}</li>{% endfor %}
+  </ul>
+  <p>This check-in is not a diagnosis. If something is worrying you, consider visiting a health facility or speaking with a professional.</p>
+  <a class="button" href="{% url 'home' %}">Back home</a>
+</main>
+{% endblock %}

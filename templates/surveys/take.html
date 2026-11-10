@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ survey.title }}{% endblock %}
+{% block body_class %}survey-page{% endblock %}
+{% block page_styles %}<link rel="stylesheet" href="{% static 'surveys/css/survey.css' %}">{% endblock %}
+{% block content %}
+<main class="survey-shell">
+  <header class="survey-header"><a class="brand" href="{% url 'home' %}"><span class="brand-mark">w</span>wellspace</a><span>Weekly wellbeing check-in</span></header>
+  <section class="survey-intro"><p class="eyebrow">A MOMENT FOR YOU</p><h1>{{ survey.title }}</h1><p>There are no right answers. Take a breath and answer as honestly as you can.</p></section>
+  <form method="post" class="survey-form">
+    {% csrf_token %}
+    {% for q in questions %}
+      <fieldset class="survey-question question-{{ q.answer_type }}">
+        <legend><span class="question-number">0{{ forloop.counter }}</span>{{ q.text }}</legend>
+
+        {% if q.answer_type == 4 %}
+          <div class="survey-scale-options" role="radiogroup" aria-label="{{ q.text }}">
+            {% for n in "12345" %}
+              <label class="scale-option"><input type="radio" name="q_{{ q.id }}" value="{{ n }}"><span>{{ n }}</span></label>
+            {% endfor %}
+          </div>
+          <div class="scale-labels"><small>Low</small><small>High</small></div>
+        {% elif q.answer_type == 3 %}
+          <div class="survey-boolean-options" role="radiogroup" aria-label="{{ q.text }}">
+            <label><input type="radio" name="q_{{ q.id }}" value="true"><span>Yes</span></label>
+            <label><input type="radio" name="q_{{ q.id }}" value="false"><span>No</span></label>
+          </div>
+        {% elif q.answer_type == 2 %}
+          <input type="number" name="q_{{ q.id }}" step="any">
+        {% else %}
+          <textarea class="survey-text-answer" name="q_{{ q.id }}" rows="8" placeholder="Write whatever feels important to share..."></textarea>
+        {% endif %}
+
+        {% for qid, msg in errors.items %}{% if qid == q.id %}<p class="error">{{ msg }}</p>{% endif %}{% endfor %}
+      </fieldset>
+    {% endfor %}
+    <button class="button" type="submit">Submit check-in</button>
+  </form>
+</main>
+{% endblock %}
