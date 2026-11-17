@@ -42,6 +42,7 @@ def take_survey(request, survey_id):
         for q in questions:
             raw = request.POST.get(f"q_{q.id}")
             submitted[q.id] = raw
+            q.submitted = (raw or "").strip()  # lets the template re-select what they picked
             value, error = clean(q, raw)
             if error:
                 errors[q.id] = error

@@ -1,0 +1,19 @@
+.facilities-shell{max-width:790px;margin:0 auto;padding:52px 28px 80px}
+.facilities-heading h1{font:normal 47px/.98 Georgia,serif;letter-spacing:-2.2px;color:#18483e;margin:0}
+.facilities-heading>p:last-child{color:#6b7d74;font-size:14px;line-height:1.55;margin:18px 0 28px}
+.facility-filters{display:flex;gap:10px;flex-wrap:wrap}
+.facility-filters input,.facility-filters select{flex:1 1 180px;padding:13px 14px;border:1px solid #cfdad1;border-radius:8px;background:#fff;color:#183832;font-size:14px}
+.facility-filters .button{padding:13px 22px}
+.facility-count{font-size:12px;color:#819087;margin:22px 0 10px}
+.facility-list{display:grid;gap:14px}
+.facility-card{background:#fffefa;border:1px solid #dbe3db;border-radius:10px;padding:22px 24px}
+.facility-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.facility-card h2{font:normal 22px Georgia,serif;color:#18483e;margin:0}
+.free-badge{background:#dce88d;color:#18483e;font-size:10px;font-weight:bold;letter-spacing:1px;padding:4px 9px;border-radius:99px}
+.facility-address,.facility-hours{font-size:13px;color:#60746b;margin:8px 0 0}
+.facility-tags{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}
+.facility-tags span{background:#e4eee5;color:#336447;font-size:11px;padding:4px 10px;border-radius:99px}
+.facility-map{font-size:13px;font-weight:bold;color:#18483e;text-decoration:none}
+.facility-map:hover{text-decoration:underline}
+.facility-empty{color:#6b7d74;font-size:14px;padding:30px 0}
+@media(max-width:560px){.facilities-shell{padding:36px 18px 55px}.facilities-heading h1{font-size:40px}}

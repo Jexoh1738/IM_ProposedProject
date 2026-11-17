@@ -14,24 +14,24 @@
         <legend><span class="question-number">0{{ forloop.counter }}</span>{{ q.text }}</legend>
 
         {% if q.answer_type == 4 %}
-  <div class="survey-scale-options" role="radiogroup" aria-label="{{ q.text }}">
-    {% for n in "12345" %}
-      <label class="scale-option">
-        <input type="radio" name="q_{{ q.id }}" value="{{ n }}"><span>{{ n }}</span>
-        {% if n == "1" %}<small class="scale-hint">Low</small>{% endif %}
-        {% if n == "5" %}<small class="scale-hint">High</small>{% endif %}
-      </label>
-    {% endfor %}
-  </div>
-{% elif q.answer_type == 3 %}
+          <div class="survey-scale-options" role="radiogroup" aria-label="{{ q.text }}">
+            {% for n in "12345" %}
+              <label class="scale-option">
+                <input type="radio" name="q_{{ q.id }}" value="{{ n }}"{% if q.submitted == n %} checked{% endif %}><span>{{ n }}</span>
+                {% if n == "1" %}<small class="scale-hint">Low</small>{% endif %}
+                {% if n == "5" %}<small class="scale-hint">High</small>{% endif %}
+              </label>
+            {% endfor %}
+          </div>
+        {% elif q.answer_type == 3 %}
           <div class="survey-boolean-options" role="radiogroup" aria-label="{{ q.text }}">
-            <label><input type="radio" name="q_{{ q.id }}" value="true"><span>Yes</span></label>
-            <label><input type="radio" name="q_{{ q.id }}" value="false"><span>No</span></label>
+            <label><input type="radio" name="q_{{ q.id }}" value="true"{% if q.submitted == "true" %} checked{% endif %}><span>Yes</span></label>
+            <label><input type="radio" name="q_{{ q.id }}" value="false"{% if q.submitted == "false" %} checked{% endif %}><span>No</span></label>
           </div>
         {% elif q.answer_type == 2 %}
-          <input type="number" name="q_{{ q.id }}" step="any">
+          <input type="number" name="q_{{ q.id }}" step="any" value="{{ q.submitted|default_if_none:'' }}">
         {% else %}
-          <textarea class="survey-text-answer" name="q_{{ q.id }}" rows="8" placeholder="Write whatever feels important to share..."></textarea>
+          <textarea class="survey-text-answer" name="q_{{ q.id }}" rows="8" placeholder="Write whatever feels important to share...">{{ q.submitted|default_if_none:'' }}</textarea>
         {% endif %}
 
         {% for qid, msg in errors.items %}{% if qid == q.id %}<p class="error">{{ msg }}</p>{% endif %}{% endfor %}

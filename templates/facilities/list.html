@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Free checkups -- Wellspace{% endblock %}
+{% block body_class %}account-page facilities-page{% endblock %}
+{% block page_styles %}<link rel="stylesheet" href="{% static 'profile/css/profile.css' %}"><link rel="stylesheet" href="{% static 'facilities/css/facilities.css' %}">{% endblock %}
+{% block content %}
+<header class="account-header"><a class="brand" href="{% url 'home' %}"><span class="brand-mark">w</span>wellspace</a><nav aria-label="Account navigation">{% if user.is_authenticated %}<a href="{% url 'profile' %}">My profile</a>{% endif %}<a class="active" href="{% url 'facility_list' %}">Free checkups</a><a href="{% url 'home' %}">Home</a></nav>{% if user.is_authenticated %}<a class="avatar avatar-small" href="{% url 'profile' %}" aria-label="Profile">{{ user.first_name|first|upper }}{{ user.last_name|first|upper }}</a>{% else %}<a class="login-link" href="{% url 'login' %}">Log in</a>{% endif %}</header>
+<main class="facilities-shell">
+  <section class="facilities-heading">
+    <p class="eyebrow">FIND SUPPORT</p>
+    <h1>Free checkups<br>near you.</h1>
+    <p>Places offering free health checkups. Opening hours may change, so it is worth calling ahead.</p>
+  </section>
+
+  <form method="get" class="facility-filters">
+    <input type="search" name="q" value="{{ query }}" placeholder="Search by name, area or city" aria-label="Search facilities">
+    <select name="category" aria-label="Checkup type">
+      <option value="">All checkup types</option>
+      {% for c in categories %}<option value="{{ c.id }}"{% if c.id == selected_category %} selected{% endif %}>{{ c.name }}</option>{% endfor %}
+    </select>
+    <button class="button" type="submit">Search</button>
+  </form>
+
+  <p class="facility-count">{{ facilities|length }} place{{ facilities|length|pluralize }} found</p>
+
+  <div class="facility-list">
+    {% for f in facilities %}
+      <article class="facility-card">
+        <div class="facility-head"><h2>{{ f.name }}</h2><span class="free-badge">FREE</span></div>
+        <p class="facility-address">{{ f.address }}, {{ f.city }}</p>
+        {% if f.hours %}<p class="facility-hours">{{ f.hours }}</p>{% endif %}
+        <div class="facility-tags">{% for c in f.categories.all %}<span>{{ c.name }}</span>{% endfor %}</div>
+        <a class="facility-map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query={{ f.latitude }},{{ f.longitude }}">View on map &rarr;</a>
+      </article>
+    {% empty %}
+      <p class="facility-empty">No places match your search yet. Try a different area or checkup type.</p>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}
