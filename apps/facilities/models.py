@@ -21,9 +21,6 @@ class Facility(models.Model):
     is_open = models.BooleanField(default=True)
 
     class Meta:
-        verbose_name_plural = "facilities"
         constraints = [
-            models.CheckConstraint(condition=Q(latitude__gte=-90, latitude__lte=90), name="fac_lat_range"),
-            models.CheckConstraint(condition=Q(longitude__gte=-180, longitude__lte=180), name="fac_lng_range"),
-            models.CheckConstraint(condition=~Q(alternative_of=F("id")), name="fac_not_alt_of_self"),
+            models.CheckConstraint(check=Q(latitude__gte=-90, latitude__lte=90), name="fac_lat_range"),
         ]

@@ -43,14 +43,16 @@ class Migration(migrations.Migration):
         ),
         migrations.AddConstraint(
             model_name='facility',
-            constraint=models.CheckConstraint(condition=models.Q(('latitude__gte', -90), ('latitude__lte', 90)), name='fac_lat_range'),
+            constraint=models.CheckConstraint(check=models.Q(('latitude__gte', -90), ('latitude__lte', 90)),
+                                              name='fac_lat_range'),
         ),
         migrations.AddConstraint(
             model_name='facility',
-            constraint=models.CheckConstraint(condition=models.Q(('longitude__gte', -180), ('longitude__lte', 180)), name='fac_lng_range'),
+            constraint=models.CheckConstraint(check=models.Q(('longitude__gte', -180), ('longitude__lte', 180)), name='fac_lng_range'),
         ),
         migrations.AddConstraint(
             model_name='facility',
-            constraint=models.CheckConstraint(condition=models.Q(('alternative_of', models.F('id')), _negated=True), name='fac_not_alt_of_self'),
+            constraint=models.CheckConstraint(check=models.Q(('alternative_of', models.F('id')), _negated=True),
+                                              name='fac_not_alt_of_self'),
         ),
     ]
