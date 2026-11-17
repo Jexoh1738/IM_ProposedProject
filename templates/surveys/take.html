@@ -14,13 +14,16 @@
         <legend><span class="question-number">0{{ forloop.counter }}</span>{{ q.text }}</legend>
 
         {% if q.answer_type == 4 %}
-          <div class="survey-scale-options" role="radiogroup" aria-label="{{ q.text }}">
-            {% for n in "12345" %}
-              <label class="scale-option"><input type="radio" name="q_{{ q.id }}" value="{{ n }}"><span>{{ n }}</span></label>
-            {% endfor %}
-          </div>
-          <div class="scale-labels"><small>Low</small><small>High</small></div>
-        {% elif q.answer_type == 3 %}
+  <div class="survey-scale-options" role="radiogroup" aria-label="{{ q.text }}">
+    {% for n in "12345" %}
+      <label class="scale-option">
+        <input type="radio" name="q_{{ q.id }}" value="{{ n }}"><span>{{ n }}</span>
+        {% if n == "1" %}<small class="scale-hint">Low</small>{% endif %}
+        {% if n == "5" %}<small class="scale-hint">High</small>{% endif %}
+      </label>
+    {% endfor %}
+  </div>
+{% elif q.answer_type == 3 %}
           <div class="survey-boolean-options" role="radiogroup" aria-label="{{ q.text }}">
             <label><input type="radio" name="q_{{ q.id }}" value="true"><span>Yes</span></label>
             <label><input type="radio" name="q_{{ q.id }}" value="false"><span>No</span></label>
