@@ -4,6 +4,8 @@ import django.db.models.deletion
 from django.conf import settings
 from django.db import migrations, models
 
+from apps.core.compat import check_constraint
+
 
 class Migration(migrations.Migration):
 
@@ -43,14 +45,14 @@ class Migration(migrations.Migration):
         ),
         migrations.AddConstraint(
             model_name='facility',
-            constraint=models.CheckConstraint(condition=models.Q(('latitude__gte', -90), ('latitude__lte', 90)), name='fac_lat_range'),
+            constraint=check_constraint(models.Q(('latitude__gte', -90), ('latitude__lte', 90)), name='fac_lat_range'),
         ),
         migrations.AddConstraint(
             model_name='facility',
-            constraint=models.CheckConstraint(condition=models.Q(('longitude__gte', -180), ('longitude__lte', 180)), name='fac_lng_range'),
+            constraint=check_constraint(models.Q(('longitude__gte', -180), ('longitude__lte', 180)), name='fac_lng_range'),
         ),
         migrations.AddConstraint(
             model_name='facility',
-            constraint=models.CheckConstraint(condition=models.Q(('alternative_of', models.F('id')), _negated=True), name='fac_not_alt_of_self'),
+            constraint=check_constraint(models.Q(('alternative_of', models.F('id')), _negated=True), name='fac_not_alt_of_self'),
         ),
     ]

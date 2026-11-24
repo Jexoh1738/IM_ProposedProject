@@ -1,0 +1,108 @@
+commit ac818b998076a3bf858bb06b3ddd5bdf418bd4eb
+Author: Jexoh1738 <villagonzalomark1@gmail.com>
+Date:   2026-11-10 16:31:29 +0800
+
+    feat(ui): arranged the survey radio buttons for better visual clarity
+
+ apps/__init__.py                                |   1 +
+ apps/concerns/__init__.py                       |   0
+ apps/concerns/admin.py                          |   3 +
+ apps/concerns/apps.py                           |   6 ++
+ apps/concerns/migrations/__init__.py            |   0
+ apps/concerns/models.py                         |   3 +
+ apps/concerns/services.py                       |   0
+ apps/concerns/tests.py                          |   3 +
+ apps/concerns/views.py                          |   3 +
+ apps/core/__init__.py                           |   0
+ apps/core/admin.py                              |   3 +
+ apps/core/apps.py                               |   6 ++
+ apps/core/migrations/0001_initial.py            |  26 +++++++++
+ apps/core/migrations/__init__.py                |   0
+ apps/core/models.py                             |  13 +++++
+ apps/core/tests.py                              |   3 +
+ apps/core/views.py                              |   3 +
+ apps/facilities/__init__.py                     |   0
+ apps/facilities/admin.py                        |   3 +
+ apps/facilities/apps.py                         |   6 ++
+ apps/facilities/migrations/0001_initial.py      |  56 +++++++++++++++++++
+ apps/facilities/migrations/__init__.py          |   0
+ apps/facilities/models.py                       |  29 ++++++++++
+ apps/facilities/tests.py                        |   3 +
+ apps/facilities/views.py                        |   3 +
+ apps/home/__init__.py                           |   0
+ apps/home/admin.py                              |   1 +
+ apps/home/apps.py                               |   6 ++
+ apps/home/migrations/__init__.py                |   0
+ apps/home/models.py                             |   3 +
+ apps/home/urls.py                               |   4 ++
+ apps/home/views.py                              |   5 ++
+ apps/login/__init__.py                          |   0
+ apps/login/admin.py                             |   1 +
+ apps/login/apps.py                              |   6 ++
+ apps/login/migrations/__init__.py               |   0
+ apps/login/models.py                            |   3 +
+ apps/login/tests.py                             |  20 +++++++
+ apps/login/urls.py                              |   4 ++
+ apps/login/views.py                             |  15 +++++
+ apps/profile/__init__.py                        |   0
+ apps/profile/admin.py                           |   1 +
+ apps/profile/apps.py                            |   6 ++
+ apps/profile/migrations/__init__.py             |   0
+ apps/profile/models.py                          |   1 +
+ apps/profile/tests.py                           |  29 ++++++++++
+ apps/profile/urls.py                            |   4 ++
+ apps/profile/views.py                           |   7 +++
+ apps/register/__init__.py                       |   0
+ apps/register/admin.py                          |   1 +
+ apps/register/apps.py                           |   6 ++
+ apps/register/migrations/__init__.py            |   0
+ apps/register/models.py                         |   3 +
+ apps/register/tests.py                          |  22 ++++++++
+ apps/register/urls.py                           |   4 ++
+ {config => apps/register}/views.py              |  20 +------
+ apps/surveys/__init__.py                        |   0
+ apps/surveys/admin.py                           |   3 +
+ apps/surveys/apps.py                            |   6 ++
+ apps/surveys/management/__init__.py             |   0
+ apps/surveys/management/commands/__init__.py    |   0
+ apps/surveys/management/commands/seed_survey.py |  20 +++++++
+ apps/surveys/migrations/0001_initial.py         |  63 +++++++++++++++++++++
+ apps/surveys/migrations/__init__.py             |   0
+ apps/surveys/models.py                          |  49 ++++++++++++++++
+ apps/surveys/tests.py                           |   3 +
+ apps/surveys/urls.py                            |   7 +++
+ apps/surveys/views.py                           |  71 ++++++++++++++++++++++++
+ apps/user_settings/__init__.py                  |   0
+ apps/user_settings/admin.py                     |   1 +
+ apps/user_settings/apps.py                      |   6 ++
+ apps/user_settings/migrations/__init__.py       |   0
+ apps/user_settings/models.py                    |   1 +
+ apps/user_settings/urls.py                      |   4 ++
+ apps/user_settings/views.py                     |  26 +++++++++
+ config/settings.py                              |  55 ++++++++----------
+ config/urls.py                                  |  12 ++--
+ requirements.txt                                | Bin 132 -> 352 bytes
+ static/home/css/home.css                        |   1 +
+ static/home/images/.gitkeep                     |   0
+ static/home/js/home.js                          |   1 +
+ static/login/css/login.css                      |   1 +
+ static/login/images/.gitkeep                    |   0
+ static/login/js/login.js                        |   1 +
+ static/profile/css/profile.css                  |   2 +
+ static/register/css/register.css                |   1 +
+ static/register/images/.gitkeep                 |   0
+ static/register/js/register.js                  |   1 +
+ static/surveys/css/survey.css                   |   1 +
+ static/user_settings/css/settings.css           |   1 +
+ templates/base.html                             |   2 +
+ templates/home.html                             |  40 -------------
+ templates/home/home.html                        |  68 +++++++++++++++++++++++
+ templates/login.html                            |  10 ----
+ templates/login/login.html                      |   7 +++
+ templates/profile/profile.html                  |  12 ++++
+ templates/register.html                         |  10 ----
+ templates/register/register.html                |   7 +++
+ templates/surveys/done.html                     |  13 +++++
+ templates/surveys/take.html                     |  40 +++++++++++++
+ templates/user_settings/settings.html           |   9 +++
+ 101 files changed, 785 insertions(+), 115 deletions(-)

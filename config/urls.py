@@ -25,4 +25,5 @@ urlpatterns = [
     path('profile/', include('apps.profile.urls')),
     path('profile/settings/', include('apps.user_settings.urls')),
     path('surveys/', include('apps.surveys.urls')),
+    path('facilities/', include('apps.facilities.urls')),
 ]

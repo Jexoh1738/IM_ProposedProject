@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Check-in history -- Wellspace{% endblock %}
+{% block body_class %}account-page facilities-page{% endblock %}
+{% block page_styles %}<link rel="stylesheet" href="{% static 'profile/css/profile.css' %}"><link rel="stylesheet" href="{% static 'facilities/css/facilities.css' %}"><link rel="stylesheet" href="{% static 'surveys/css/history.css' %}">{% endblock %}
+{% block content %}
+{% include 'partials/account_header.html' with active='profile' %}
+<main class="facilities-shell">
+  <section class="facilities-heading">
+    <p class="eyebrow">YOUR CHECK-INS</p>
+    <h1>Check-in<br>history.</h1>
+    <p>Your past weekly check-ins and what you answered.</p>
+  </section>
+
+  {# SUBQUERY result: only shown when at least one check-in reported discomfort #}
+  {% if flagged_count %}
+  <div class="history-notice">
+    <p>You reported discomfort in <strong>{{ flagged_count }}</strong> check-in{{ flagged_count|pluralize }}. A free checkup may help.</p>
+    <a class="facility-map" href="{% url 'facility_list' %}">Find free checkups &rarr;</a>
+  </div>
+  {% endif %}
+
+  <div class="facility-list">
+    {# JOIN result: answers + question text + survey title, grouped by check-in #}
+    {% for response, answers in checkins %}
+      <article class="facility-card">
+        <div class="facility-head">
+          <h2>Week of {{ response.week_start|date:"M j, Y" }}</h2>
+          {% if response.id in flagged_ids %}<span class="flag-badge">REPORTED DISCOMFORT</span>{% endif %}
+        </div>
+        <p class="facility-address">{{ response.survey.title }} &middot; submitted {{ response.submitted_at|date:"M j, Y" }}</p>
+        <dl class="history-answers">
+          {% for a in answers %}
+            <dt>{{ a.question.text }}</dt>
+            <dd>{% if a.question.answer_type == 3 %}{% if a.value == "true" %}Yes{% else %}No{% endif %}{% elif a.question.answer_type == 4 %}{{ a.value }} / 5{% else %}{{ a.value }}{% endif %}</dd>
+          {% endfor %}
+        </dl>
+      </article>
+    {% empty %}
+      <p class="facility-empty">No check-ins yet. <a class="facility-map" href="{% url 'survey_take' 1 %}">Start your first check-in &rarr;</a></p>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

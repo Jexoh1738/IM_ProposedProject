@@ -1,0 +1,6 @@
+.history-notice{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;background:#f6f1d4;border:1px solid #e3dca4;border-radius:10px;padding:16px 20px;margin-bottom:20px;font-size:14px;color:#18483e}
+.history-notice p{margin:0}
+.flag-badge{background:#f3d9cf;color:#8a3b22;font-size:10px;font-weight:bold;letter-spacing:1px;padding:4px 9px;border-radius:99px;white-space:nowrap}
+.history-answers{margin:14px 0 0;display:grid;grid-template-columns:1fr auto;gap:8px 18px;font-size:13px}
+.history-answers dt{color:#60746b}
+.history-answers dd{margin:0;color:#18483e;font-weight:bold;text-align:right;max-width:260px;overflow-wrap:anywhere}

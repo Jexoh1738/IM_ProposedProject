@@ -5,6 +5,7 @@ from django.db import transaction
 from django.shortcuts import get_object_or_404, redirect, render
 
 from .models import Answer, Question, Survey, SurveyResponse
+from .queries import checkin_history, checkins_with_reported_discomfort
 
 
 def week_start(d):
@@ -42,6 +43,7 @@ def take_survey(request, survey_id):
         for q in questions:
             raw = request.POST.get(f"q_{q.id}")
             submitted[q.id] = raw
+            q.submitted = (raw or "").strip()  # lets the template re-select what they picked
             value, error = clean(q, raw)
             if error:
                 errors[q.id] = error
@@ -69,3 +71,14 @@ def survey_done(request, response_id):
     response = get_object_or_404(SurveyResponse, pk=response_id, user=request.user)
     answers = response.answers.select_related("question").order_by("question_id")
     return render(request, "surveys/done.html", {"response": response, "answers": answers})
+
+
+@login_required
+def history(request):
+    """Check-in history. JOIN -> the list of answers; SUBQUERY -> the weeks with discomfort."""
+    flagged = checkins_with_reported_discomfort(request.user)
+    return render(request, "surveys/history.html", {
+        "checkins": checkin_history(request.user),            # JOIN (4 tables)
+        "flagged_ids": set(flagged.values_list("id", flat=True)),  # SUBQUERY result
+        "flagged_count": flagged.count(),
+    })
