@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
-{% block title %}Check-in saved{% endblock %}
+{% load static %}
+{% block title %}Check-in saved -- Wellspace{% endblock %}
+{% block body_class %}done-page{% endblock %}
+{% block page_styles %}<link rel="stylesheet" href="{% static 'surveys/css/done.css' %}">{% endblock %}
 {% block content %}
+<<<<<<< HEAD
 <main class="shell">
   <h1>Thanks for checking in</h1>
   <p>Week of {{ response.week_start }}</p>
@@ -11,5 +15,33 @@
   <p><a class="button" href="{% url 'facility_list' %}">Find free checkups</a></p>
   <p><a href="{% url 'survey_history' %}">View my check-in history</a></p>
   <p><a href="{% url 'profile' %}">Back to my profile</a></p>
+=======
+<div class="done-bg" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
+<header class="done-header"><a class="brand" href="{% url 'home' %}"><span class="brand-mark">w</span>wellspace</a></header>
+<main class="done-shell">
+  <section class="done-hero">
+    <span class="done-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+    <p class="eyebrow">CHECK-IN SAVED</p>
+    <h1>Thanks for checking in</h1>
+    <p class="done-week">Week of {{ response.week_start|date:"F j, Y" }}</p>
+  </section>
+
+  <section class="done-card" aria-label="Your answers">
+    <dl class="done-answers">
+      {% for a in answers %}
+        <dt>{{ a.question.text }}</dt>
+        <dd>{% if a.value == "true" %}Yes{% elif a.value == "false" %}No{% elif a.question.answer_type == 4 %}{{ a.value }} / 5{% else %}{{ a.value }}{% endif %}</dd>
+      {% endfor %}
+    </dl>
+  </section>
+
+  <p class="done-note">This check-in is not a diagnosis. If something is worrying you, consider visiting a health facility or speaking with a professional.</p>
+
+  <div class="done-actions" role="group" aria-label="Next steps">
+    <a class="button done-btn" href="{% url 'facility_list' %}">Find free checkups</a>
+    <a class="button done-btn done-btn-lime" href="{% url 'survey_history' %}">View my check-in history</a>
+    <a class="button done-btn done-btn-outline" href="{% url 'profile' %}">Back to my profile</a>
+  </div>
+>>>>>>> 96a3c3ba16ca0e989b86ccf5b19213636adcbd3a
 </main>
 {% endblock %}

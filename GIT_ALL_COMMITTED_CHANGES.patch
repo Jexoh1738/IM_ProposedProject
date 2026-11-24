@@ -1,0 +1,694 @@
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+index 0000000..26d3352
+--- /dev/null
++++ b/.idea/.gitignore
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+diff --git a/.idea/IM_ProposedProject.iml b/.idea/IM_ProposedProject.iml
+new file mode 100644
+index 0000000..8b8c395
+--- /dev/null
++++ b/.idea/IM_ProposedProject.iml
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++  <component name="PyDocumentationSettings">
++    <option name="format" value="PLAIN" />
++    <option name="myDocStringFormat" value="Plain" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+index 0000000..105ce2d
+--- /dev/null
++++ b/.idea/inspectionProfiles/profiles_settings.xml
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+index 0000000..3925182
+--- /dev/null
++++ b/.idea/misc.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="PyCharmProfessionalAdvertiser">
++    <option name="shown" value="true" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+index 0000000..f57e57b
+--- /dev/null
++++ b/.idea/modules.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/IM_ProposedProject.iml" filepath="$PROJECT_DIR$/.idea/IM_ProposedProject.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+index 0000000..35eb1dd
+--- /dev/null
++++ b/.idea/vcs.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/BASELINE_COMMIT.txt b/BASELINE_COMMIT.txt
+new file mode 100644
+index 0000000..d033441
+--- /dev/null
++++ b/BASELINE_COMMIT.txt
+@@ -0,0 +1 @@
++8300ccba23f65b36ae41d8eea57c00eec227c320 | Jexoh1738 | 2026-11-17 16:25:12 +0800 | feat(UI): fixed the text alignment
+diff --git a/GIT_ALL_COMMITTED_CHANGES.patch b/GIT_ALL_COMMITTED_CHANGES.patch
+new file mode 100644
+index 0000000..e69de29
+diff --git a/GIT_COMMIT_DETAILS.txt b/GIT_COMMIT_DETAILS.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..edc1a33c54d46a67400beb80654edba7593ce78f
+GIT binary patch
+literal 12684
+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
+Yp2h!%z_a8nYxWEJUiT5Q?Tsb=3yc~dZvX%Q
+
+literal 0
+HcmV?d00001
+
+diff --git a/GIT_DIFF_STAT.txt b/GIT_DIFF_STAT.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/GIT_STATUS.txt b/GIT_STATUS.txt
+new file mode 100644
+index 0000000000000000000000000000000000000000..d1791e3e308c7ee9f91145786044b138893b79dc
+GIT binary patch
+literal 444
+zcma)%NeaS15Jmr5@D4da)Dr~9C?s)_WF3Mt#6&a;y}bImMO1L2D7yPs{a4kOv!hUs
+za_xwNT3T|SX`_Oy$%R$7+*aCCGg_t6s%@F*C_^hrQ_FF>uuf{K0r@|Ar8$!ds1L6v
+z55Ei3)N*z+#GBevSFwf)G*QHvsjn%sLf#3UT1WEH?^`{?6%eo83I2iA#?&MEykonE
+h`Rz>WH=F^y5s}fE;QBW6-jQ1Br_E9(KmXzPR#$|uMehIr
+
+literal 0
+HcmV?d00001
+
+diff --git a/GIT_UNCOMMITTED_CHANGES.patch b/GIT_UNCOMMITTED_CHANGES.patch
+new file mode 100644
+index 0000000000000000000000000000000000000000..add65687e906fca060d7a083cc9a5cbf3c447718
+GIT binary patch
+literal 4758
+zcmeI0+fNfg6vof9iT}f<FP3moZjG4KfFu|nFfr<rnx@h%HkOvOMd8IiUHyGC9d@@n
+z3p7yiflRvWT+f`#ch0x``F(6Xn^<CFo^5_-yd}0u8{0P<+Q`kmWbC!Qu@Ba=_dNIb
+zedKM8*>ip!PU+J8&TwYio^s|XZOmJj_aoNzoy4A{ZuErSF;XPEhrEFseP(LwNb518
+z8}?YyN8YJjAm!_VPJV2UoWu^dJ4ep8yF~+eTj;n(+u$Bu+eDKcW)tqHn>Lu=GVPY-
+zRvBNE?vk<W+G4G+YrAN%idLJpf|gtKmM?n^dVa+bUTNbqMa?0$EBdl-G5@YbRxa5K
+zXTOAVifsw`(z-aRUi|DmJk_!NX)H}#Y$=K+R<AfGoP5F_dA?8F4bbX@_oh9WiQEfD
+z{Eg)2csq(nZ*pEZe@rCpgRhi0`d)EYe}<41kTHA0J2a|u8+kx$gkIghMLVXKx|_<2
+zJH)8$m{hLs=hpkxetp>vt*N}0v+Mv#k`uhNTw##}O+C8v9+}nXdYc5B&F);hEj;q#
+z{=S>hd2L;m8oW@RdB94*ilWe0s4BFq+w&Q`#P;M76LwsM8A<(LF%#3Tm_dSuSq_Qq
+zxjUPbBlsb<ud4%MNXq&nSG~0QhpPrdDwt}PDrUX{9k^=Hqh=_7``A_GONmrfl$4n!
+zOm9S8NvHF%95vw739;?vx9D~0joH(8l7r{&yEZJ|KKD~2ZfgIVVCswGNVnnh`3Reb
+zt<Ub0Eyde1F1}7gr9{*=`B_|C?8$TQ2CHt%#bfg4W7@G30*~H+L$AQY#G?IsoI@Xg
+zqU<Z_0)!SZdw7Z9GGp$6Iic?q%M6gzEFu0CvqMmsB4uC)*jE_sAVpTz7uuQ2A$in$
+z?(Lr;f{Ls^1^w+Qe=l=l<)9H?P(zmyGG^W4o_*x$+pj;pZOz>w)8Bt3)+%^=j8W=4
+zM0$U6d&;*78WgR1J?~VtD{^r$&T8h}oU(3Z-PkIhshc@wo@Lfxg&5PWT{7*(>lUl<
+zo)t(t&j`GJv6Vr?JadTaILnOwjgG%e9=xh1G(kw+YM`XUGgQc!4p(R3OrPosIBz^=
+w-$C~shXGO9UtdE$6ZvmJeFAb)`w0q^%~Sf~771@cRKg1V->A#1@{;n*U#t(;(f|Me
+
+literal 0
+HcmV?d00001
+
+diff --git a/apps/core/admin.py b/apps/core/admin.py
+index 8c38f3f..d0d2817 100644
+--- a/apps/core/admin.py
++++ b/apps/core/admin.py
+@@ -1,3 +1,5 @@
+ from django.contrib import admin
+ 
+-# Register your models here.
++from .models import HealthCategory
++
++admin.site.register(HealthCategory)
+diff --git a/apps/core/compat.py b/apps/core/compat.py
+new file mode 100644
+index 0000000..d1e387d
+--- /dev/null
++++ b/apps/core/compat.py
+@@ -0,0 +1,8 @@
++import django
++from django.db import models
++
++
++def check_constraint(condition, name):
++    """CheckConstraint works on Django 4.2 (check=) and Django 5.1+ (condition=)."""
++    key = "condition" if django.VERSION >= (5, 1) else "check"
++    return models.CheckConstraint(**{key: condition}, name=name)
+diff --git a/apps/facilities/admin.py b/apps/facilities/admin.py
+index 8c38f3f..aa9a4c2 100644
+--- a/apps/facilities/admin.py
++++ b/apps/facilities/admin.py
+@@ -1,3 +1,14 @@
+ from django.contrib import admin
+ 
+-# Register your models here.
++from .models import CheckupVisit, Facility
++
++
++@admin.register(Facility)
++class FacilityAdmin(admin.ModelAdmin):
++    list_display = ("name", "city", "is_free", "is_open")
++    list_filter = ("city", "is_free", "is_open", "categories")
++    search_fields = ("name", "address", "city")
++    filter_horizontal = ("categories",)
++
++
++admin.site.register(CheckupVisit)
+diff --git a/apps/facilities/management/__init__.py b/apps/facilities/management/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/apps/facilities/management/commands/__init__.py b/apps/facilities/management/commands/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/apps/facilities/management/commands/seed_facilities.py b/apps/facilities/management/commands/seed_facilities.py
+new file mode 100644
+index 0000000..c49e906
+--- /dev/null
++++ b/apps/facilities/management/commands/seed_facilities.py
+@@ -0,0 +1,46 @@
++from decimal import Decimal
++
++from django.core.management.base import BaseCommand
++
++from apps.core.models import HealthCategory
++from apps.facilities.models import Facility
++
++# PLACEHOLDER DATA - replace with real establishments (or add them in /admin/).
++CATEGORIES = [
++    ("General checkup", "physical", "Basic physical exam and vitals."),
++    ("Mental wellbeing", "mental", "Counselling and wellbeing screening."),
++    ("Dental", "dental", "Dental screening and cleaning."),
++    ("Vision", "vision", "Eye and vision screening."),
++]
++
++FACILITIES = [
++    ("Placeholder Barangay Health Center", "123 Sample Street, Brgy. Sample", "Cebu City",
++     "10.3157", "123.8854", "Mon-Fri, 8:00 AM - 5:00 PM", ["General checkup", "Dental"]),
++    ("Placeholder University Clinic", "Sample Campus, University Ave.", "Cebu City",
++     "10.3220", "123.8990", "Mon-Sat, 8:00 AM - 4:00 PM", ["General checkup", "Mental wellbeing", "Vision"]),
++    ("Placeholder City Wellness Center", "45 Example Road", "Cebu City",
++     "10.2980", "123.8910", "Mon-Fri, 9:00 AM - 6:00 PM", ["Mental wellbeing"]),
++    ("Placeholder Community Dental Clinic", "78 Demo Avenue", "Mandaue City",
++     "10.3236", "123.9223", "Tue-Sat, 9:00 AM - 3:00 PM", ["Dental", "Vision"]),
++]
++
++
++class Command(BaseCommand):
++    help = "Create placeholder health categories and free-checkup facilities"
++
++    def handle(self, *args, **options):
++        cats = {}
++        for name, kind, desc in CATEGORIES:
++            cats[name], _ = HealthCategory.objects.get_or_create(
++                name=name, defaults={"kind": kind, "description": desc}
++            )
++        created = 0
++        for name, address, city, lat, lng, hours, cat_names in FACILITIES:
++            fac, was_created = Facility.objects.get_or_create(
++                name=name,
++                defaults={"address": address, "city": city, "latitude": Decimal(lat),
++                          "longitude": Decimal(lng), "hours": hours, "is_free": True},
++            )
++            fac.categories.set([cats[c] for c in cat_names])
++            created += was_created
++        self.stdout.write(f"{created} facilities created, {len(FACILITIES) - created} already existed")
+diff --git a/apps/facilities/migrations/0001_initial.py b/apps/facilities/migrations/0001_initial.py
+index 5016b4d..9239e81 100644
+--- a/apps/facilities/migrations/0001_initial.py
++++ b/apps/facilities/migrations/0001_initial.py
+@@ -4,6 +4,8 @@ import django.db.models.deletion
+ from django.conf import settings
+ from django.db import migrations, models
+ 
++from apps.core.compat import check_constraint
++
+ 
+ class Migration(migrations.Migration):
+ 
+@@ -43,14 +45,14 @@ class Migration(migrations.Migration):
+         ),
+         migrations.AddConstraint(
+             model_name='facility',
+-            constraint=models.CheckConstraint(condition=models.Q(('latitude__gte', -90), ('latitude__lte', 90)), name='fac_lat_range'),
++            constraint=check_constraint(models.Q(('latitude__gte', -90), ('latitude__lte', 90)), name='fac_lat_range'),
+         ),
+         migrations.AddConstraint(
+             model_name='facility',
+-            constraint=models.CheckConstraint(condition=models.Q(('longitude__gte', -180), ('longitude__lte', 180)), name='fac_lng_range'),
++            constraint=check_constraint(models.Q(('longitude__gte', -180), ('longitude__lte', 180)), name='fac_lng_range'),
+         ),
+         migrations.AddConstraint(
+             model_name='facility',
+-            constraint=models.CheckConstraint(condition=models.Q(('alternative_of', models.F('id')), _negated=True), name='fac_not_alt_of_self'),
++            constraint=check_constraint(models.Q(('alternative_of', models.F('id')), _negated=True), name='fac_not_alt_of_self'),
+         ),
+     ]
+diff --git a/apps/facilities/migrations/0002_facility_categories_facility_hours_facility_is_free.py b/apps/facilities/migrations/0002_facility_categories_facility_hours_facility_is_free.py
+new file mode 100644
+index 0000000..26706bd
+--- /dev/null
++++ b/apps/facilities/migrations/0002_facility_categories_facility_hours_facility_is_free.py
+@@ -0,0 +1,29 @@
++# Generated by Django 6.1.3 on 2026-11-17 08:50
++
++from django.db import migrations, models
++
++
++class Migration(migrations.Migration):
++
++    dependencies = [
++        ('core', '0001_initial'),
++        ('facilities', '0001_initial'),
++    ]
++
++    operations = [
++        migrations.AddField(
++            model_name='facility',
++            name='categories',
++            field=models.ManyToManyField(blank=True, help_text='Checkup types offered here', related_name='facilities', to='core.healthcategory'),
++        ),
++        migrations.AddField(
++            model_name='facility',
++            name='hours',
++            field=models.CharField(blank=True, max_length=120),
++        ),
++        migrations.AddField(
++            model_name='facility',
++            name='is_free',
++            field=models.BooleanField(default=True, help_text='Offers free checkups'),
++        ),
++    ]
+diff --git a/apps/facilities/models.py b/apps/facilities/models.py
+index 51eef58..6158945 100644
+--- a/apps/facilities/models.py
++++ b/apps/facilities/models.py
+@@ -2,6 +2,8 @@ from django.conf import settings
+ from django.db import models
+ from django.db.models import F, Q
+ 
++from apps.core.compat import check_constraint
++
+ # Create your models here.
+ class CheckupVisit(models.Model):
+     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="visits")
+@@ -19,11 +21,20 @@ class Facility(models.Model):
+     latitude = models.DecimalField(max_digits=9, decimal_places=6)
+     longitude = models.DecimalField(max_digits=9, decimal_places=6)
+     is_open = models.BooleanField(default=True)
++    is_free = models.BooleanField(default=True, help_text="Offers free checkups")
++    hours = models.CharField(max_length=120, blank=True)
++    categories = models.ManyToManyField(
++        "core.HealthCategory", blank=True, related_name="facilities",
++        help_text="Checkup types offered here",
++    )
++
++    def __str__(self):
++        return self.name
+ 
+     class Meta:
+         verbose_name_plural = "facilities"
+         constraints = [
+-            models.CheckConstraint(condition=Q(latitude__gte=-90, latitude__lte=90), name="fac_lat_range"),
+-            models.CheckConstraint(condition=Q(longitude__gte=-180, longitude__lte=180), name="fac_lng_range"),
+-            models.CheckConstraint(condition=~Q(alternative_of=F("id")), name="fac_not_alt_of_self"),
++            check_constraint(Q(latitude__gte=-90, latitude__lte=90), name="fac_lat_range"),
++            check_constraint(Q(longitude__gte=-180, longitude__lte=180), name="fac_lng_range"),
++            check_constraint(~Q(alternative_of=F("id")), name="fac_not_alt_of_self"),
+         ]
+\ No newline at end of file
+diff --git a/apps/facilities/urls.py b/apps/facilities/urls.py
+new file mode 100644
+index 0000000..19a22a7
+--- /dev/null
++++ b/apps/facilities/urls.py
+@@ -0,0 +1,4 @@
++from django.urls import path
++from . import views
++
++urlpatterns = [path("", views.facility_list, name="facility_list")]
+diff --git a/apps/facilities/views.py b/apps/facilities/views.py
+index 91ea44a..6f125b3 100644
+--- a/apps/facilities/views.py
++++ b/apps/facilities/views.py
+@@ -1,3 +1,27 @@
++from django.db.models import Q
+ from django.shortcuts import render
+ 
+-# Create your views here.
++from apps.core.models import HealthCategory
++
++from .models import Facility
++
++
++def facility_list(request):
++    """Free-checkup establishments, filterable by search text and checkup type."""
++    query = request.GET.get("q", "").strip()
++    category_id = request.GET.get("category", "").strip()
++
++    facilities = Facility.objects.filter(is_open=True, is_free=True).prefetch_related("categories")
++    if query:
++        facilities = facilities.filter(
++            Q(name__icontains=query) | Q(address__icontains=query) | Q(city__icontains=query)
++        )
++    if category_id.isdigit():
++        facilities = facilities.filter(categories__id=int(category_id))
++
++    return render(request, "facilities/list.html", {
++        "facilities": facilities.distinct().order_by("name"),
++        "categories": HealthCategory.objects.order_by("name"),
++        "query": query,
++        "selected_category": int(category_id) if category_id.isdigit() else None,
++    })
+diff --git a/apps/profile/views.py b/apps/profile/views.py
+index 6c724a4..1d8bb4f 100644
+--- a/apps/profile/views.py
++++ b/apps/profile/views.py
+@@ -1,7 +1,14 @@
+ from django.contrib.auth.decorators import login_required
+ from django.shortcuts import render
+ 
++from apps.surveys.models import SurveyResponse
++
+ 
+ @login_required
+ def profile(request):
+-    return render(request, "profile/profile.html", {"member_since": request.user.date_joined})
++    responses = SurveyResponse.objects.filter(user=request.user)
++    return render(request, "profile/profile.html", {
++        "member_since": request.user.date_joined,
++        "checkin_count": responses.count(),
++        "last_checkin": responses.order_by("-submitted_at").first(),
++    })
+diff --git a/apps/surveys/admin.py b/apps/surveys/admin.py
+index 8c38f3f..28caf91 100644
+--- a/apps/surveys/admin.py
++++ b/apps/surveys/admin.py
+@@ -1,3 +1,21 @@
+ from django.contrib import admin
+ 
+-# Register your models here.
++from .models import Answer, Question, Survey, SurveyResponse
++
++
++class AnswerInline(admin.TabularInline):
++    model = Answer
++    extra = 0
++    readonly_fields = ("question", "value")
++    can_delete = False
++
++
++@admin.register(SurveyResponse)
++class SurveyResponseAdmin(admin.ModelAdmin):
++    list_display = ("user", "survey", "week_start", "submitted_at")
++    list_filter = ("survey", "week_start")
++    inlines = [AnswerInline]
++
++
++admin.site.register(Survey)
++admin.site.register(Question)
+diff --git a/apps/surveys/views.py b/apps/surveys/views.py
+index 085732a..b9ef802 100644
+--- a/apps/surveys/views.py
++++ b/apps/surveys/views.py
+@@ -42,6 +42,7 @@ def take_survey(request, survey_id):
+         for q in questions:
+             raw = request.POST.get(f"q_{q.id}")
+             submitted[q.id] = raw
++            q.submitted = (raw or "").strip()  # lets the template re-select what they picked
+             value, error = clean(q, raw)
+             if error:
+                 errors[q.id] = error
+diff --git a/config/urls.py b/config/urls.py
+index 6344bac..8c42d91 100644
+--- a/config/urls.py
++++ b/config/urls.py
+@@ -25,4 +25,5 @@ urlpatterns = [
+     path('profile/', include('apps.profile.urls')),
+     path('profile/settings/', include('apps.user_settings.urls')),
+     path('surveys/', include('apps.surveys.urls')),
++    path('facilities/', include('apps.facilities.urls')),
+ ]
+diff --git a/static/facilities/css/facilities.css b/static/facilities/css/facilities.css
+new file mode 100644
+index 0000000..d58491f
+--- /dev/null
++++ b/static/facilities/css/facilities.css
+@@ -0,0 +1,19 @@
++.facilities-shell{max-width:790px;margin:0 auto;padding:52px 28px 80px}
++.facilities-heading h1{font:normal 47px/.98 Georgia,serif;letter-spacing:-2.2px;color:#18483e;margin:0}
++.facilities-heading>p:last-child{color:#6b7d74;font-size:14px;line-height:1.55;margin:18px 0 28px}
++.facility-filters{display:flex;gap:10px;flex-wrap:wrap}
++.facility-filters input,.facility-filters select{flex:1 1 180px;padding:13px 14px;border:1px solid #cfdad1;border-radius:8px;background:#fff;color:#183832;font-size:14px}
++.facility-filters .button{padding:13px 22px}
++.facility-count{font-size:12px;color:#819087;margin:22px 0 10px}
++.facility-list{display:grid;gap:14px}
++.facility-card{background:#fffefa;border:1px solid #dbe3db;border-radius:10px;padding:22px 24px}
++.facility-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
++.facility-card h2{font:normal 22px Georgia,serif;color:#18483e;margin:0}
++.free-badge{background:#dce88d;color:#18483e;font-size:10px;font-weight:bold;letter-spacing:1px;padding:4px 9px;border-radius:99px}
++.facility-address,.facility-hours{font-size:13px;color:#60746b;margin:8px 0 0}
++.facility-tags{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0}
++.facility-tags span{background:#e4eee5;color:#336447;font-size:11px;padding:4px 10px;border-radius:99px}
++.facility-map{font-size:13px;font-weight:bold;color:#18483e;text-decoration:none}
++.facility-map:hover{text-decoration:underline}
++.facility-empty{color:#6b7d74;font-size:14px;padding:30px 0}
++@media(max-width:560px){.facilities-shell{padding:36px 18px 55px}.facilities-heading h1{font-size:40px}}
+diff --git a/static/profile/css/profile.css b/static/profile/css/profile.css
+index f6e2333..6ed54a3 100644
+--- a/static/profile/css/profile.css
++++ b/static/profile/css/profile.css
+@@ -1,2 +1,4 @@
+ .account-page{background:#f7f5ed;color:#183832}.account-header{height:76px;padding:0 5.5%;display:flex;align-items:center;justify-content:space-between;background:#fffefa;border-bottom:1px solid #dce3da}.account-header nav{margin:0;gap:28px}.account-header nav a{padding:29px 0 24px;font-size:13px}.account-header nav a.active{color:#18483e;border-bottom:2px solid #d97859;font-weight:bold}.avatar{display:grid;place-items:center;border-radius:50%;background:#dce88d;color:#18483e;font-weight:bold;text-decoration:none;letter-spacing:.5px}.avatar-small{width:36px;height:36px;font-size:11px}.avatar-large{width:86px;height:86px;font-size:24px;background:#f0a183;color:#fffefa}.account-shell{max-width:1180px;margin:auto;padding:58px 38px 82px;display:grid;grid-template-columns:242px 1fr;gap:86px}.profile-sidebar{padding-top:8px}.profile-sidebar h1{font:normal 25px Georgia,serif;margin:18px 0 6px;color:#18483e}.profile-sidebar>p{font-size:13px;color:#748178;margin:0 0 10px}.member-label{font-size:11px;color:#849189}.sidebar-rule{border-top:1px solid #d5dfd6;margin:30px 0 13px}.side-link{display:flex;gap:12px;align-items:center;color:#60746b;text-decoration:none;font-size:13px;padding:11px 8px;border-radius:5px}.side-link span{font-size:17px;color:#5d806f;width:16px;text-align:center}.side-link.active{background:#e4eee5;color:#1c4c3e;font-weight:bold}.profile-content{max-width:730px}.profile-greeting h2,.settings-heading h2{font:normal 47px/.98 Georgia,serif;letter-spacing:-2.2px;color:#18483e;margin:0}.profile-greeting>p:last-child,.settings-heading>p:last-child{color:#6b7d74;font-size:14px;line-height:1.55;margin:18px 0 29px}.checkin-card{background:#18483e;color:#fffefa;position:relative;overflow:hidden;min-height:256px;border-radius:12px;padding:31px 35px}.checkin-card>*{position:relative;z-index:1}.checkin-card .eyebrow{color:#dce88d;margin:0 0 10px}.card-icon{float:right;color:#dce88d;font:34px Georgia,serif}.checkin-card h3{font:normal 31px/1.03 Georgia,serif;letter-spacing:-1px;margin:0}.checkin-card h3+p{color:#c5d7c6;font-size:13px;line-height:1.5;max-width:315px;margin:13px 0 19px}.outline-button{border:1px solid #dce88d;border-radius:99px;background:transparent;color:#fffefa;padding:10px 15px;font-weight:bold;font-size:12px;cursor:pointer}.outline-button span{margin-left:10px;font-size:15px}.card-orb{position:absolute;width:270px;height:270px;border-radius:50%;right:-44px;bottom:-117px;background:#c8dc85}.card-orb:after{content:"";position:absolute;width:205px;height:205px;border-radius:50%;background:#18483e;left:-50px;top:-40px}.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}.profile-tile{background:#fffefa;border:1px solid #dbe3db;border-radius:9px;padding:22px 24px}.tile-icon{font:26px Georgia,serif}.tile-icon.coral{color:#d97859}.tile-icon.green{color:#54876a}.tile-label{color:#87938b;font-weight:bold;letter-spacing:1px;font-size:9px;margin:11px 0 2px}.profile-tile strong{font:normal 34px Georgia,serif;color:#18483e}.profile-tile strong+p{font-size:12px;line-height:1.45;color:#738179;margin:5px 0 0}.profile-note{display:flex;gap:15px;background:#fce8c6;padding:19px 22px;border-radius:8px}.profile-note>span{color:#d97859;font-size:22px}.profile-note h3{font:normal 20px Georgia,serif;margin:0 0 5px}.profile-note p{font-size:12px;color:#65766e;line-height:1.45;margin:0}
+ @media(max-width:760px){.account-header{padding:0 22px}.account-header nav{gap:14px}.account-header nav a{font-size:11px}.account-shell{display:block;padding:38px 22px 60px}.profile-sidebar{margin-bottom:40px}.profile-sidebar .side-link{display:none}.profile-greeting h2{font-size:41px}.profile-grid{grid-template-columns:1fr}.checkin-card{padding:28px}.card-orb{right:-115px}.avatar-small{display:none}}
++
++a.outline-button{display:inline-block;text-decoration:none}
+diff --git a/static/surveys/css/survey.css b/static/surveys/css/survey.css
+index 6704c8a..f981a4b 100644
+--- a/static/surveys/css/survey.css
++++ b/static/surveys/css/survey.css
+@@ -1 +1,5 @@
+ .survey-page{background:#f7f5ed}.survey-shell{max-width:790px;margin:0 auto;padding:0 28px 80px}.survey-header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #dbe2da}.survey-header>span{font-size:11px;letter-spacing:.75px;text-transform:uppercase;color:#738178}.survey-intro{text-align:center;padding:58px 0 34px}.survey-intro .eyebrow{margin-bottom:15px}.survey-intro h1{font:normal 48px/.98 Georgia,serif;letter-spacing:-2px;color:#18483e;margin:0}.survey-intro>p:last-child{max-width:470px;margin:17px auto 0;color:#697a72;font-size:14px;line-height:1.55}.survey-form{background:#fffefa;border:1px solid #dbe3db;border-radius:12px;padding:10px 36px 34px}.survey-question{border:0;border-bottom:1px solid #e1e7e1;margin:0;padding:28px 0 26px;min-width:0}.survey-question:last-of-type{border-bottom:0;padding-bottom:30px}.survey-question legend{width:100%;padding:0;color:#193b34;font:normal 23px/1.25 Georgia,serif}.question-number{display:inline-grid;place-items:center;vertical-align:4px;width:23px;height:23px;border-radius:50%;margin-right:11px;background:#e1eddc;color:#336447;font:700 9px Arial,sans-serif}.survey-scale-options{display:flex;align-items:center;gap:13px;margin:23px 0 8px}.survey-scale-options .scale-option,.survey-boolean-options label{display:inline-flex!important;flex-direction:row;align-items:center;gap:8px;margin:0!important;cursor:pointer;color:#476057;font-size:14px;font-weight:normal!important}.survey-scale-options input[type=radio],.survey-boolean-options input[type=radio]{appearance:none!important;display:inline-grid!important;place-content:center;width:20px!important;height:20px!important;margin:0!important;padding:0!important;border:1.5px solid #91a99c!important;border-radius:50%!important;background:#fff!important;box-shadow:none!important;cursor:pointer}.survey-scale-options input[type=radio]::before,.survey-boolean-options input[type=radio]::before{content:"";width:10px;height:10px;border-radius:50%;transform:scale(0);background:#1d5948;transition:transform .15s}.survey-scale-options input[type=radio]:checked,.survey-boolean-options input[type=radio]:checked{border-color:#1d5948!important}.survey-scale-options input[type=radio]:checked::before,.survey-boolean-options input[type=radio]:checked::before{transform:scale(1)}.scale-option span{min-width:11px}.scale-labels{display:flex;justify-content:space-between;width:177px;color:#819087;font-size:11px}.survey-boolean-options{display:flex;align-items:center;gap:29px;margin-top:21px}.question-2 input[type=number]{width:min(100%,260px);margin-top:19px}.survey-text-answer{display:block;width:100%;min-height:180px;resize:vertical;margin-top:20px;padding:16px;border:1px solid #cfdad1;border-radius:7px;background:#fff;color:#183832;font:14px/1.55 Arial,sans-serif;outline:none}.survey-text-answer:focus{border-color:#5c8c77;box-shadow:0 0 0 3px #e5efe7}.survey-text-answer::placeholder{color:#91a098}.survey-question .error{margin:12px 0 0;color:#b45036;font-size:12px}.survey-form>.button{margin-top:24px;width:100%;padding:16px}@media(max-width:560px){.survey-shell{padding:0 18px 55px}.survey-header>span{display:none}.survey-intro{padding:42px 0 26px}.survey-intro h1{font-size:40px}.survey-form{padding:7px 21px 25px}.survey-question legend{font-size:20px}.survey-scale-options{gap:11px}.survey-text-answer{min-height:160px}}
++
++.scale-option{position:relative}
++.scale-hint{position:absolute;left:0;top:100%;margin-top:6px;color:#819087;font-size:11px}
++.survey-scale-options{margin-bottom:28px}
+diff --git a/templates/facilities/list.html b/templates/facilities/list.html
+new file mode 100644
+index 0000000..102d7c2
+--- /dev/null
++++ b/templates/facilities/list.html
+@@ -0,0 +1,40 @@
++{% extends 'base.html' %}
++{% load static %}
++{% block title %}Free checkups -- Wellspace{% endblock %}
++{% block body_class %}account-page facilities-page{% endblock %}
++{% block page_styles %}<link rel="stylesheet" href="{% static 'profile/css/profile.css' %}"><link rel="stylesheet" href="{% static 'facilities/css/facilities.css' %}">{% endblock %}
++{% block content %}
++{% include 'partials/account_header.html' with active='facilities' %}
++<main class="facilities-shell">
++  <section class="facilities-heading">
++    <p class="eyebrow">FIND SUPPORT</p>
++    <h1>Free checkups<br>near you.</h1>
++    <p>Places offering free health checkups. Opening hours may change, so it is worth calling ahead.</p>
++  </section>
++
++  <form method="get" class="facility-filters">
++    <input type="search" name="q" value="{{ query }}" placeholder="Search by name, area or city" aria-label="Search facilities">
++    <select name="category" aria-label="Checkup type">
++      <option value="">All checkup types</option>
++      {% for c in categories %}<option value="{{ c.id }}"{% if c.id == selected_category %} selected{% endif %}>{{ c.name }}</option>{% endfor %}
++    </select>
++    <button class="button" type="submit">Search</button>
++  </form>
++
++  <p class="facility-count">{{ facilities|length }} place{{ facilities|length|pluralize }} found</p>
++
++  <div class="facility-list">
++    {% for f in facilities %}
++      <article class="facility-card">
++        <div class="facility-head"><h2>{{ f.name }}</h2><span class="free-badge">FREE</span></div>
++        <p class="facility-address">{{ f.address }}, {{ f.city }}</p>
++        {% if f.hours %}<p class="facility-hours">{{ f.hours }}</p>{% endif %}
++        <div class="facility-tags">{% for c in f.categories.all %}<span>{{ c.name }}</span>{% endfor %}</div>
++        <a class="facility-map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query={{ f.latitude }},{{ f.longitude }}">View on map &rarr;</a>
++      </article>
++    {% empty %}
++      <p class="facility-empty">No places match your search yet. Try a different area or checkup type.</p>
++    {% endfor %}
++  </div>
++</main>
++{% endblock %}
+diff --git a/templates/home/home.html b/templates/home/home.html
+index 47c966c..25307f4 100644
+--- a/templates/home/home.html
++++ b/templates/home/home.html
+@@ -3,7 +3,7 @@
+ {% block content %}
+ <header class="site-header shell">
+   <a class="brand" href="{% url 'home' %}" aria-label="Wellspace home"><span class="brand-mark">w</span>wellspace</a>
+-  <nav aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="#about">About</a></nav>
++  <nav aria-label="Main navigation"><a href="#how-it-works">How it works</a><a href="{% url 'facility_list' %}">Free checkups</a><a href="#about">About</a></nav>
+   <div class="header-actions">
+     {% if user.is_authenticated %}
+       <a class="login-link" href="{% url 'profile' %}">Profile</a>
+@@ -28,6 +28,7 @@
+       {% else %}
+         <a class="button" href="{% url 'register' %}">Start your check-in <span>→</span></a>
+       {% endif %}
++      <a class="text-link" href="{% url 'facility_list' %}">Find free checkups <span>→</span></a>
+       <a class="text-link" href="#how-it-works">See how it works <span>↓</span></a>
+       </div>
+     <p class="reassurance">
+diff --git a/templates/partials/account_header.html b/templates/partials/account_header.html
+new file mode 100644
+index 0000000..64b2b67
+--- /dev/null
++++ b/templates/partials/account_header.html
+@@ -0,0 +1,2 @@
++{# Shared header for profile, settings and free-checkups pages. Usage: {% include 'partials/account_header.html' with active='profile' %} #}
++<header class="account-header"><a class="brand" href="{% url 'home' %}"><span class="brand-mark">w</span>wellspace</a><nav aria-label="Account navigation">{% if user.is_authenticated %}<a{% if active == 'profile' %} class="active"{% endif %} href="{% url 'profile' %}">My profile</a><a{% if active == 'settings' %} class="active"{% endif %} href="{% url 'user_settings' %}">Settings</a>{% endif %}<a{% if active == 'facilities' %} class="active"{% endif %} href="{% url 'facility_list' %}">Free checkups</a><a href="{% url 'home' %}">Home</a></nav>{% if user.is_authenticated %}<a class="avatar avatar-small" href="{% url 'profile' %}" aria-label="Profile">{{ user.first_name|first|upper }}{{ user.last_name|first|upper }}</a>{% else %}<a class="login-link" href="{% url 'login' %}">Log in</a>{% endif %}</header>
+diff --git a/templates/profile/profile.html b/templates/profile/profile.html
+index 6370b89..8b5fc10 100644
+--- a/templates/profile/profile.html
++++ b/templates/profile/profile.html
+@@ -4,9 +4,9 @@
+ {% block body_class %}account-page{% endblock %}
+ {% block page_styles %}<link rel="stylesheet" href="{% static 'profile/css/profile.css' %}">{% endblock %}
+ {% block content %}
+-<header class="account-header"><a class="brand" href="{% url 'home' %}"><span class="brand-mark">w</span>wellspace</a><nav aria-label="Account navigation"><a class="active" href="{% url 'profile' %}">My profile</a><a href="{% url 'user_settings' %}">Settings</a><a href="{% url 'home' %}">Home</a></nav><a class="avatar avatar-small" href="{% url 'profile' %}" aria-label="Profile">{{ request.user.first_name|first|upper }}{{ request.user.last_name|first|upper }}</a></header>
++{% include 'partials/account_header.html' with active='profile' %}
+ <main class="account-shell">
+-  <aside class="profile-sidebar"><div class="avatar avatar-large">{{ request.user.first_name|first|upper }}{{ request.user.last_name|first|upper }}</div><h1>{{ request.user.get_full_name }}</h1><p>{{ request.user.email }}</p><span class="member-label">Member since {{ member_since|date:"F Y" }}</span><div class="sidebar-rule"></div><a class="side-link active" href="{% url 'profile' %}"><span>♡</span> Overview</a><a class="side-link" href="{% url 'user_settings' %}"><span>⚙</span> Account settings</a></aside>
+-  <section class="profile-content"><div class="profile-greeting"><p class="eyebrow">YOUR WELLSPACE</p><h2>Hi, {{ request.user.first_name }}.</h2><p>Here is a gentle snapshot of your wellbeing space.</p></div><div class="checkin-card"><div><span class="card-icon">☼</span><p class="eyebrow">WEEKLY WELLNESS</p><h3>Your next check-in<br>is waiting for you.</h3><p>Take a quiet moment to notice how you are feeling today.</p><button class="outline-button" type="button">Start check-in <span>→</span></button></div><div class="card-orb"></div></div><div class="profile-grid"><article class="profile-tile"><span class="tile-icon coral">♡</span><p class="tile-label">CHECK-INS</p><strong>0</strong><p>Your completed wellbeing check-ins.</p></article><article class="profile-tile"><span class="tile-icon green">⌁</span><p class="tile-label">SUPPORTS SAVED</p><strong>0</strong><p>Places and resources you have saved.</p></article></div><section class="profile-note"><span>✦</span><div><h3>A little reminder</h3><p>You do not need to have everything figured out to take care of yourself. Showing up is enough.</p></div></section></section>
++  <aside class="profile-sidebar"><div class="avatar avatar-large">{{ request.user.first_name|first|upper }}{{ request.user.last_name|first|upper }}</div><h1>{{ request.user.get_full_name }}</h1><p>{{ request.user.email }}</p><span class="member-label">Member since {{ member_since|date:"F Y" }}</span><div class="sidebar-rule"></div><a class="side-link active" href="{% url 'profile' %}"><span>♡</span> Overview</a><a class="side-link" href="{% url 'user_settings' %}"><span>⚙</span> Account settings</a><a class="side-link" href="{% url 'facility_list' %}"><span>⌁</span> Find free checkups</a></aside>
++  <section class="profile-content"><div class="profile-greeting"><p class="eyebrow">YOUR WELLSPACE</p><h2>Hi, {{ request.user.first_name }}.</h2><p>Here is a gentle snapshot of your wellbeing space.</p></div><div class="checkin-card"><div><span class="card-icon">☼</span><p class="eyebrow">WEEKLY WELLNESS</p><h3>Your next check-in<br>is waiting for you.</h3><p>Take a quiet moment to notice how you are feeling today.</p><a class="outline-button" href="{% url 'survey_take' 1 %}">Start check-in <span>→</span></a></div><div class="card-orb"></div></div><div class="profile-grid"><article class="profile-tile"><span class="tile-icon coral">♡</span><p class="tile-label">CHECK-INS</p><strong>{{ checkin_count }}</strong><p>{% if last_checkin %}Last one: {{ last_checkin.submitted_at|date:"M j, Y" }}.{% else %}Your completed wellbeing check-ins.{% endif %}</p></article><article class="profile-tile"><span class="tile-icon green">⌁</span><p class="tile-label">SUPPORTS SAVED</p><strong>0</strong><p>Places and resources you have saved.</p></article></div><section class="profile-note"><span>✦</span><div><h3>A little reminder</h3><p>You do not need to have everything figured out to take care of yourself. Showing up is enough.</p></div></section></section>
+ </main>
+ {% endblock %}
+diff --git a/templates/surveys/done.html b/templates/surveys/done.html
+index 134b4bd..114f1fc 100644
+--- a/templates/surveys/done.html
++++ b/templates/surveys/done.html
+@@ -5,9 +5,10 @@
+   <h1>Thanks for checking in</h1>
+   <p>Week of {{ response.week_start }}</p>
+   <ul>
+-    {% for a in answers %}<li><b>{{ a.question.text }}</b> {{ a.value }}</li>{% endfor %}
++    {% for a in answers %}<li><b>{{ a.question.text }}</b> {% if a.value == "true" %}Yes{% elif a.value == "false" %}No{% else %}{{ a.value }}{% endif %}</li>{% endfor %}
+   </ul>
+   <p>This check-in is not a diagnosis. If something is worrying you, consider visiting a health facility or speaking with a professional.</p>
+-  <a class="button" href="{% url 'home' %}">Back home</a>
++  <p><a class="button" href="{% url 'facility_list' %}">Find free checkups</a></p>
++  <p><a href="{% url 'profile' %}">Back to my profile</a></p>
+ </main>
+ {% endblock %}
+\ No newline at end of file
+diff --git a/templates/surveys/take.html b/templates/surveys/take.html
+index f4abcf9..c49f339 100644
+--- a/templates/surveys/take.html
++++ b/templates/surveys/take.html
+@@ -16,19 +16,22 @@
+         {% if q.answer_type == 4 %}
+           <div class="survey-scale-options" role="radiogroup" aria-label="{{ q.text }}">
+             {% for n in "12345" %}
+-              <label class="scale-option"><input type="radio" name="q_{{ q.id }}" value="{{ n }}"><span>{{ n }}</span></label>
++              <label class="scale-option">
++                <input type="radio" name="q_{{ q.id }}" value="{{ n }}"{% if q.submitted == n %} checked{% endif %}><span>{{ n }}</span>
++                {% if n == "1" %}<small class="scale-hint">Low</small>{% endif %}
++                {% if n == "5" %}<small class="scale-hint">High</small>{% endif %}
++              </label>
+             {% endfor %}
+           </div>
+-          <div class="scale-labels"><small>Low</small><small>High</small></div>
+         {% elif q.answer_type == 3 %}
+           <div class="survey-boolean-options" role="radiogroup" aria-label="{{ q.text }}">
+-            <label><input type="radio" name="q_{{ q.id }}" value="true"><span>Yes</span></label>
+-            <label><input type="radio" name="q_{{ q.id }}" value="false"><span>No</span></label>
++            <label><input type="radio" name="q_{{ q.id }}" value="true"{% if q.submitted == "true" %} checked{% endif %}><span>Yes</span></label>
++            <label><input type="radio" name="q_{{ q.id }}" value="false"{% if q.submitted == "false" %} checked{% endif %}><span>No</span></label>
+           </div>
+         {% elif q.answer_type == 2 %}
+-          <input type="number" name="q_{{ q.id }}" step="any">
++          <input type="number" name="q_{{ q.id }}" step="any" value="{{ q.submitted|default_if_none:'' }}">
+         {% else %}
+-          <textarea class="survey-text-answer" name="q_{{ q.id }}" rows="8" placeholder="Write whatever feels important to share..."></textarea>
++          <textarea class="survey-text-answer" name="q_{{ q.id }}" rows="8" placeholder="Write whatever feels important to share...">{{ q.submitted|default_if_none:'' }}</textarea>
+         {% endif %}
+ 
+         {% for qid, msg in errors.items %}{% if qid == q.id %}<p class="error">{{ msg }}</p>{% endif %}{% endfor %}
+diff --git a/templates/user_settings/settings.html b/templates/user_settings/settings.html
+index 163a648..96376d9 100644
+--- a/templates/user_settings/settings.html
++++ b/templates/user_settings/settings.html
+@@ -4,6 +4,6 @@
+ {% block body_class %}account-page{% endblock %}
+ {% block page_styles %}<link rel="stylesheet" href="{% static 'profile/css/profile.css' %}"><link rel="stylesheet" href="{% static 'user_settings/css/settings.css' %}">{% endblock %}
+ {% block content %}
+-<header class="account-header"><a class="brand" href="{% url 'home' %}"><span class="brand-mark">w</span>wellspace</a><nav aria-label="Account navigation"><a href="{% url 'profile' %}">My profile</a><a class="active" href="{% url 'user_settings' %}">Settings</a><a href="{% url 'home' %}">Home</a></nav><a class="avatar avatar-small" href="{% url 'profile' %}" aria-label="Profile">{{ request.user.first_name|first|upper }}{{ request.user.last_name|first|upper }}</a></header>
++{% include 'partials/account_header.html' with active='settings' %}
+ <main class="account-shell settings-shell"><aside class="settings-sidebar"><p class="eyebrow">PROFILE</p><h1>Settings</h1><a href="#details" class="side-link active"><span>◌</span> Personal details</a><a href="#preferences" class="side-link"><span>♡</span> Preferences</a><a href="{% url 'profile' %}" class="back-profile">← Back to profile</a></aside><section class="settings-content"><div class="settings-heading"><p class="eyebrow">ACCOUNT SETTINGS</p><h2>Make this space<br>feel like yours.</h2><p>Update the details connected to your Wellspace account.</p></div><form method="post" class="settings-form" id="details">{% csrf_token %}<div class="form-section-heading"><span class="section-number">01</span><div><h3>Personal details</h3><p>This is how we will address you in your wellbeing space.</p></div></div><div class="settings-fields"><label>First name<input name="first_name" value="{{ request.user.first_name }}" autocomplete="given-name" required></label><label>Last name<input name="last_name" value="{{ request.user.last_name }}" autocomplete="family-name" required></label><label class="full-field">Email address<input type="email" name="email" value="{{ request.user.email }}" autocomplete="email" required></label></div><div class="form-actions"><a href="{% url 'profile' %}">Cancel</a><button class="button" type="submit">Save changes <span>→</span></button></div></form><section class="preferences-card" id="preferences"><div class="form-section-heading"><span class="section-number">02</span><div><h3>Wellbeing reminders</h3><p>Personal reminder preferences will be available here next.</p></div></div><div class="preference-disabled"><span>☼</span><p>Weekly check-in reminders</p><span class="coming-soon">COMING SOON</span></div></section></section></main>
+ {% endblock %}

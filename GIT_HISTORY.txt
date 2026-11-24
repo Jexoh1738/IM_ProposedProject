@@ -1,0 +1,8 @@
+0807687 | Jexoh1738 | 
+2026-11-17 17:14:26 +0800 | feat(ui): free checkup page added into main page for easier navigation and minor fixes on the profile page
+23756b4 | Jexoh1738 | 
+2026-11-17 17:05:41 +0800 | feat(ui): implement facilities page for free checkups
+521aa58 | Jexoh1738 | 
+2026-11-17 16:47:08 +0800 | feat(UI): Aligned text with radio buttons in the survey. Functionality of survey button in profile fixed
+8300ccb | Jexoh1738 | 
+2026-11-17 16:25:12 +0800 | feat(UI): fixed the text alignment

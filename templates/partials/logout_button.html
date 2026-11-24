@@ -1,0 +1,2 @@
+{# Usage: {% include 'partials/logout_button.html' with btn_class='in-sidebar' %}  (logout must be a POST) #}
+<form method="post" action="{% url 'logout' %}" class="logout-form">{% csrf_token %}<button type="submit" class="logout-btn {{ btn_class }}">{% if btn_class == 'in-sidebar' %}<span aria-hidden="true">&#8617;</span> {% endif %}Log out</button></form>
