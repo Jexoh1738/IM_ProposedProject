@@ -1,0 +1,27 @@
+.done-page{position:relative;min-height:100vh;overflow-x:hidden}
+.done-bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.75}
+.b1{width:380px;height:380px;background:#dce88d;top:-120px;right:-90px;opacity:.55}
+.b2{width:300px;height:300px;background:#deece1;bottom:-110px;left:-90px}
+.b3{width:170px;height:170px;background:#ffd8b7;bottom:14%;right:7%;opacity:.6}
+.done-header,.done-shell{position:relative;z-index:1}
+.done-header{max-width:680px;margin:0 auto;padding:26px 22px 0}
+.done-shell{max-width:680px;margin:0 auto;padding:34px 22px 70px;text-align:center}
+.done-badge{display:inline-flex;align-items:center;justify-content:center;width:68px;height:68px;border-radius:50%;background:#dce88d;color:#18483e;box-shadow:0 0 0 9px rgba(220,232,141,.35)}
+.done-hero .eyebrow{margin:22px 0 8px}
+.done-hero h1{font:normal 42px/1.05 Georgia,serif;letter-spacing:-1.6px;color:#18483e;margin:0}
+.done-week{color:#6b7d74;font-size:14px;margin:12px 0 28px}
+.done-card{background:#fffefa;border:1px solid #dbe3db;border-radius:14px;padding:8px 26px;text-align:left;box-shadow:0 10px 30px rgba(24,72,62,.06)}
+.done-answers{margin:0;display:grid;grid-template-columns:1fr auto}
+.done-answers dt,.done-answers dd{margin:0;padding:15px 0;border-bottom:1px solid #e8eee7;font-size:14px}
+.done-answers dt{color:#60746b;padding-right:18px}
+.done-answers dd{color:#18483e;font-weight:bold;text-align:right;max-width:260px;overflow-wrap:anywhere}
+.done-answers dt:nth-last-of-type(1),.done-answers dd:nth-last-of-type(1){border-bottom:0}
+.done-note{color:#6b7d74;font-size:13px;line-height:1.6;max-width:520px;margin:22px auto 28px}
+.done-actions{display:flex;flex-direction:column;align-items:center;gap:12px}
+.done-btn{width:100%;max-width:320px}
+.done-btn-lime{background:#dce88d;color:#18483e}
+.done-btn-lime:hover{background:#cfdc78}
+.done-btn-outline{background:transparent;color:#18483e;border:1.5px solid #18483e}
+.done-btn-outline:hover{background:#18483e;color:#fffef5}
+@media(max-width:560px){.done-hero h1{font-size:34px}.done-card{padding:4px 18px}.done-answers{grid-template-columns:1fr}.done-answers dt{padding:14px 0 0;border:0}.done-answers dd{text-align:left;padding:4px 0 14px;max-width:none}.b1{width:260px;height:260px}}
